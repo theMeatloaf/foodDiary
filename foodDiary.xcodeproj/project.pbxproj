@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		167AB24E7CE7A40B5011CB7D /* Pods_foodDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83E6B0AAE0DCFD98CDCDB3F /* Pods_foodDiary.framework */; };
 		CEFCB40F1CF7922700565274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB40E1CF7922700565274 /* AppDelegate.swift */; };
 		CEFCB4111CF7922700565274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB4101CF7922700565274 /* ViewController.swift */; };
 		CEFCB4141CF7922700565274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFCB4121CF7922700565274 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51B4A31095EDBC24DC306EE2 /* Pods-foodDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-foodDiary/Pods-foodDiary.release.xcconfig"; sourceTree = "<group>"; };
 		CEFCB40B1CF7922700565274 /* foodDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFCB40E1CF7922700565274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFCB4101CF7922700565274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		CEFCB41B1CF7922700565274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEFCB41D1CF7922700565274 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEFCB4241CF796F500565274 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = models/Meal.swift; sourceTree = "<group>"; };
+		E83E6B0AAE0DCFD98CDCDB3F /* Pods_foodDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F97291B06EA6E6DBB52DA55F /* Pods-foodDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodDiary/Pods-foodDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				167AB24E7CE7A40B5011CB7D /* Pods_foodDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				CEFCB40D1CF7922700565274 /* foodDiary */,
 				CEFCB40C1CF7922700565274 /* Products */,
+				F36D869934EB4D8B011AAA4A /* Pods */,
+				FF3D9684980ED33362E16776 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +85,23 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		F36D869934EB4D8B011AAA4A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F97291B06EA6E6DBB52DA55F /* Pods-foodDiary.debug.xcconfig */,
+				51B4A31095EDBC24DC306EE2 /* Pods-foodDiary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF3D9684980ED33362E16776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E83E6B0AAE0DCFD98CDCDB3F /* Pods_foodDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEFCB4201CF7922700565274 /* Build configuration list for PBXNativeTarget "foodDiary" */;
 			buildPhases = (
+				7B54207208B546388CD337B1 /* 📦 Check Pods Manifest.lock */,
 				CEFCB4071CF7922700565274 /* Sources */,
 				CEFCB4081CF7922700565274 /* Frameworks */,
 				CEFCB4091CF7922700565274 /* Resources */,
+				8F1E2D23891F25C4D7CF2AD6 /* 📦 Embed Pods Frameworks */,
+				DF40AF0112198F547669A06D /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B54207208B546388CD337B1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F1E2D23891F25C4D7CF2AD6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodDiary/Pods-foodDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF40AF0112198F547669A06D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodDiary/Pods-foodDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEFCB4071CF7922700565274 /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		CEFCB4211CF7922700565274 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F97291B06EA6E6DBB52DA55F /* Pods-foodDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = foodDiary/Info.plist;
@@ -274,6 +350,7 @@
 		};
 		CEFCB4221CF7922700565274 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51B4A31095EDBC24DC306EE2 /* Pods-foodDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = foodDiary/Info.plist;
@@ -302,6 +379,7 @@
 				CEFCB4221CF7922700565274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
