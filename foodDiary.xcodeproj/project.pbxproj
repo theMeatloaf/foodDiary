@@ -12,8 +12,9 @@
 		CE6AC13E1CF7AEBA000C417A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6AC13D1CF7AEBA000C417A /* CoreData.framework */; };
 		CE6AC1401CF7BDC1000C417A /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */; };
 		CE6AC1421CF7BDE4000C417A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC1411CF7BDE4000C417A /* Meal.swift */; };
+		CE6AC1461CF7DE93000C417A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC1451CF7DE93000C417A /* Section.swift */; };
 		CEFCB40F1CF7922700565274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB40E1CF7922700565274 /* AppDelegate.swift */; };
-		CEFCB4111CF7922700565274 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB4101CF7922700565274 /* ViewController.swift */; };
+		CEFCB4111CF7922700565274 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB4101CF7922700565274 /* ListViewController.swift */; };
 		CEFCB4141CF7922700565274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFCB4121CF7922700565274 /* Main.storyboard */; };
 		CEFCB4171CF7922700565274 /* foodDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB4151CF7922700565274 /* foodDiary.xcdatamodeld */; };
 		CEFCB4191CF7922700565274 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFCB4181CF7922700565274 /* Assets.xcassets */; };
@@ -26,9 +27,10 @@
 		CE6AC13D1CF7AEBA000C417A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Meal+CoreDataProperties.swift"; path = "models/Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE6AC1411CF7BDE4000C417A /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = models/Meal.swift; sourceTree = "<group>"; };
+		CE6AC1451CF7DE93000C417A /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		CEFCB40B1CF7922700565274 /* foodDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFCB40E1CF7922700565274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEFCB4101CF7922700565274 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEFCB4101CF7922700565274 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		CEFCB4131CF7922700565274 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEFCB4161CF7922700565274 /* foodDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = foodDiary.xcdatamodel; sourceTree = "<group>"; };
 		CEFCB4181CF7922700565274 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		CE6AC1381CF7A1CB000C417A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEFCB4101CF7922700565274 /* ViewController.swift */,
+				CEFCB4101CF7922700565274 /* ListViewController.swift */,
 				CE6AC1391CF7A1EA000C417A /* AddMealVC.swift */,
 			);
 			name = ViewControllers;
@@ -96,6 +98,7 @@
 		CEFCB4231CF793E400565274 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CE6AC1451CF7DE93000C417A /* Section.swift */,
 				CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */,
 				CE6AC1411CF7BDE4000C417A /* Meal.swift */,
 			);
@@ -244,7 +247,8 @@
 			files = (
 				CEFCB4171CF7922700565274 /* foodDiary.xcdatamodeld in Sources */,
 				CE6AC1401CF7BDC1000C417A /* Meal+CoreDataProperties.swift in Sources */,
-				CEFCB4111CF7922700565274 /* ViewController.swift in Sources */,
+				CEFCB4111CF7922700565274 /* ListViewController.swift in Sources */,
+				CE6AC1461CF7DE93000C417A /* Section.swift in Sources */,
 				CEFCB40F1CF7922700565274 /* AppDelegate.swift in Sources */,
 				CE6AC1421CF7BDE4000C417A /* Meal.swift in Sources */,
 				CE6AC13A1CF7A1EA000C417A /* AddMealVC.swift in Sources */,

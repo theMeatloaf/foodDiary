@@ -28,6 +28,6 @@ public class Meal: NSManagedObject {
             return .None
         }
     }
-        
+    
     
 }
