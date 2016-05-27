@@ -7,20 +7,27 @@
 //
 
 import Foundation
+import CoreData
 
-enum MealType : String{
+
+public enum MealType : String{
     case Breakfast = "Breakfast"
     case Snack = "Snack"
     case Lunch = "Lunch"
     case Dinner = "Dinner"
 }
 
-public struct Meal {
+@objc(Meal)
+public class Meal: NSManagedObject {
+
     
-    var dateTime : NSDate?
-    var type : MealType?
-    var whatYouAte : String?
-    var whereYouAte : String?
-    var howYouFeel : String?
+    public func getMealType() -> MealType? {
+        if let ty = self.type {
+            return MealType(rawValue: ty)!
+        }else {
+            return .None
+        }
+    }
+        
     
 }

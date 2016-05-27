@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gxL-Pb-G9V">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gxL-Pb-G9V">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-544" y="305"/>
         </scene>
-        <!--Title-->
+        <!--My Food Diary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="foodDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ListViewController" customModule="foodDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -50,34 +50,20 @@
                             <constraint firstItem="Jpv-mb-Ehk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yEY-cR-HB4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="id9-oy-tqU">
+                    <navigationItem key="navigationItem" title="My Food Diary" id="id9-oy-tqU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="SNE-p7-lxZ">
                             <connections>
                                 <action selector="addMeal:" destination="BYZ-38-t0r" id="Xkd-mv-MFn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Jpv-mb-Ehk" id="rOG-vz-bh3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Nyk-4V-v9w">
-            <objects>
-                <viewController id="g4h-w5-kk2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="egZ-Ny-cAY"/>
-                        <viewControllerLayoutGuide type="bottom" id="D9r-ru-0tR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JmZ-x0-CwB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h4V-gB-30c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="790" y="223"/>
+            <point key="canvasLocation" x="247" y="305"/>
         </scene>
     </scenes>
 </document>
