@@ -39,9 +39,9 @@ public class ListViewController: UIViewController,UITableViewDelegate,UITableVie
             UIApplication.sharedApplication().delegate as! AppDelegate
         
         let managedContext = appDelegate.managedObjectContext
-        
+        let sortDescriptor = NSSortDescriptor(key: "dateTime", ascending: false)
         let mealFetch = NSFetchRequest(entityName: "Meal")
-        
+        mealFetch.sortDescriptors = [sortDescriptor]
         do {
             let meals = try managedContext.executeFetchRequest(mealFetch) as! [Meal]
             self.buildOutAndReloadTable(meals)
@@ -55,6 +55,9 @@ public class ListViewController: UIViewController,UITableViewDelegate,UITableVie
         self.sections = []
         
         for meal in meals {
+            if meal.dateTime == nil {
+                continue;
+            }
             let header = ListViewController.dateFormater.stringFromDate(meal.dateTime!)
             let contains = self.sections.contains({ (section:TableSection) -> Bool in
                 return section.name == header
@@ -92,8 +95,8 @@ public class ListViewController: UIViewController,UITableViewDelegate,UITableVie
         
         let cell = UITableViewCell(style: .Subtitle, reuseIdentifier: "Meal")
         
-        cell.textLabel?.text = "\(thisMeal.type!) - \(ListViewController.timeFormater.stringFromDate(thisMeal.dateTime!))"
-        cell.detailTextLabel?.text = thisMeal.whatYouAte
+        cell.textLabel?.text = "\(thisMeal.howYouFeel!) \(thisMeal.type!) - \(ListViewController.timeFormater.stringFromDate(thisMeal.dateTime!))"
+        cell.detailTextLabel?.text = thisMeal.whatYouAte?.stringByReplacingOccurrencesOfString("\n", withString: ", ")
         
         return cell
     }
@@ -151,9 +154,17 @@ public class ListViewController: UIViewController,UITableViewDelegate,UITableVie
             try managedContext.save()
             
             sections[indexPath.section].values.removeAtIndex(indexPath.row)
+            
             self.tableView.beginUpdates()
-            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            if (sections[indexPath.section].values.count==0) {
+                //remove section its empty now
+                self.tableView.deleteSections(NSIndexSet(index: indexPath.section), withRowAnimation: .Automatic)
+                sections.removeAtIndex(indexPath.section)
+            } else {
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
             self.tableView.endUpdates()
+            
         } catch let error as NSError  {
             print("Could not save \(error), \(error.userInfo)")
         }

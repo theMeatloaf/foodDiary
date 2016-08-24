@@ -13,6 +13,10 @@
 		CE6AC1401CF7BDC1000C417A /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */; };
 		CE6AC1421CF7BDE4000C417A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC1411CF7BDE4000C417A /* Meal.swift */; };
 		CE6AC1461CF7DE93000C417A /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC1451CF7DE93000C417A /* Section.swift */; };
+		CE8076671D6D4801003F7AA7 /* Tag+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8076651D6D4801003F7AA7 /* Tag+CoreDataProperties.swift */; };
+		CE8076681D6D4801003F7AA7 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8076661D6D4801003F7AA7 /* Tag.swift */; };
+		CE8076701D6D4C9D003F7AA7 /* tagRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE80766F1D6D4C9D003F7AA7 /* tagRow.swift */; };
+		CE8076721D6D535D003F7AA7 /* TagSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8076711D6D535D003F7AA7 /* TagSelectorVC.swift */; };
 		CEFCB40F1CF7922700565274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB40E1CF7922700565274 /* AppDelegate.swift */; };
 		CEFCB4111CF7922700565274 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFCB4101CF7922700565274 /* ListViewController.swift */; };
 		CEFCB4141CF7922700565274 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFCB4121CF7922700565274 /* Main.storyboard */; };
@@ -28,6 +32,10 @@
 		CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Meal+CoreDataProperties.swift"; path = "models/Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CE6AC1411CF7BDE4000C417A /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Meal.swift; path = models/Meal.swift; sourceTree = "<group>"; };
 		CE6AC1451CF7DE93000C417A /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		CE8076651D6D4801003F7AA7 /* Tag+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Tag+CoreDataProperties.swift"; path = "models/Tag+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CE8076661D6D4801003F7AA7 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tag.swift; path = models/Tag.swift; sourceTree = "<group>"; };
+		CE80766F1D6D4C9D003F7AA7 /* tagRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tagRow.swift; path = Form/tagRow.swift; sourceTree = "<group>"; };
+		CE8076711D6D535D003F7AA7 /* TagSelectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagSelectorVC.swift; sourceTree = "<group>"; };
 		CEFCB40B1CF7922700565274 /* foodDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFCB40E1CF7922700565274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFCB4101CF7922700565274 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +70,15 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		CE80766D1D6D4A42003F7AA7 /* Form Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				CE80766F1D6D4C9D003F7AA7 /* tagRow.swift */,
+				CE8076711D6D535D003F7AA7 /* TagSelectorVC.swift */,
+			);
+			name = "Form Stuff";
+			sourceTree = "<group>";
+		};
 		CEFCB4021CF7922700565274 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +100,7 @@
 		CEFCB40D1CF7922700565274 /* foodDiary */ = {
 			isa = PBXGroup;
 			children = (
+				CE80766D1D6D4A42003F7AA7 /* Form Stuff */,
 				CE6AC1381CF7A1CB000C417A /* ViewControllers */,
 				CEFCB4231CF793E400565274 /* Models */,
 				CEFCB40E1CF7922700565274 /* AppDelegate.swift */,
@@ -100,6 +118,8 @@
 			children = (
 				CE6AC1451CF7DE93000C417A /* Section.swift */,
 				CE6AC13F1CF7BDC1000C417A /* Meal+CoreDataProperties.swift */,
+				CE8076651D6D4801003F7AA7 /* Tag+CoreDataProperties.swift */,
+				CE8076661D6D4801003F7AA7 /* Tag.swift */,
 				CE6AC1411CF7BDE4000C417A /* Meal.swift */,
 			);
 			name = Models;
@@ -158,6 +178,7 @@
 				TargetAttributes = {
 					CEFCB40A1CF7922700565274 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = V9265L9BH5;
 					};
 				};
 			};
@@ -247,11 +268,15 @@
 			files = (
 				CEFCB4171CF7922700565274 /* foodDiary.xcdatamodeld in Sources */,
 				CE6AC1401CF7BDC1000C417A /* Meal+CoreDataProperties.swift in Sources */,
+				CE8076721D6D535D003F7AA7 /* TagSelectorVC.swift in Sources */,
 				CEFCB4111CF7922700565274 /* ListViewController.swift in Sources */,
 				CE6AC1461CF7DE93000C417A /* Section.swift in Sources */,
 				CEFCB40F1CF7922700565274 /* AppDelegate.swift in Sources */,
 				CE6AC1421CF7BDE4000C417A /* Meal.swift in Sources */,
+				CE8076681D6D4801003F7AA7 /* Tag.swift in Sources */,
+				CE8076671D6D4801003F7AA7 /* Tag+CoreDataProperties.swift in Sources */,
 				CE6AC13A1CF7A1EA000C417A /* AddMealVC.swift in Sources */,
+				CE8076701D6D4C9D003F7AA7 /* tagRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,10 +390,13 @@
 			baseConfigurationReference = F97291B06EA6E6DBB52DA55F /* Pods-foodDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = foodDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJW.foodDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -377,10 +405,13 @@
 			baseConfigurationReference = 51B4A31095EDBC24DC306EE2 /* Pods-foodDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = foodDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RJW.foodDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

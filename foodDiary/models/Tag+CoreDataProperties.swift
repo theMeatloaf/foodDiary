@@ -1,5 +1,5 @@
 //
-//  Meal+CoreDataProperties.swift
+//  Tag+CoreDataProperties.swift
 //  foodDiary
 //
 //  Created by Ryan Wedig on 8/23/16.
@@ -12,14 +12,8 @@
 import Foundation
 import CoreData
 
-extension Meal {
+extension Tag {
 
-    @NSManaged var dateTime: NSDate?
-    @NSManaged var howYouFeel: String?
-    @NSManaged var type: String?
-    @NSManaged var whatYouAte: String?
-    @NSManaged var whereYouAte: String?
-    @NSManaged var notes: String?
-    @NSManaged var tags: NSSet?
+    @NSManaged var name: String?
 
 }

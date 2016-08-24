@@ -20,6 +20,8 @@ public class AddMealViewController : FormViewController {
         }
         self.inputMeal?.whatYouAte = values["whatyouate"] as? String
         self.inputMeal?.dateTime = values["Date Eaten"] as? NSDate
+        self.inputMeal?.howYouFeel = values["howyoufeel"] as? String
+        self.inputMeal?.notes = values["notes"] as? String
         
         //get context...
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -73,8 +75,30 @@ public class AddMealViewController : FormViewController {
                 $0.value = inputMeal?.whatYouAte
             }
         
+            +++ Section("How did it make you feel?")
+            <<< SegmentedRow<String>(){
+                $0.options = ["☹️","😐","😀"]
+                $0.tag = "howyoufeel"
+                if let curVal = inputMeal?.howYouFeel {
+                    $0.value = curVal
+                } else {
+                    $0.value = "😐"
+                }
+                }.cellSetup { cell, row in
+                    cell.segmentedControl.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.redColor()], forState: .Selected)
+            }
+            
+            <<< TextAreaRow(){
+                $0.tag = "notes"
+                $0.placeholder = "notes..."
+                $0.textAreaHeight = .Dynamic(initialTextViewHeight: 110)
+                $0.value = inputMeal?.notes
+            }
         
-        
+            +++ Section("Tags")
+            <<< tagRow(){
+                $0.options = ["test1","test2"]
+            }
+
     }
-    
 }
